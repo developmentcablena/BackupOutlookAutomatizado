@@ -19,7 +19,15 @@ Public comandoRun As String
 Public comandoQueryBasic As String
 Public comandoQueryComplementares As String
 Public CaminhoSaidaLog As String
+Global CaminhoSaidaBacupPST As String
+Global arq As Object
 
+Global vUsuario As String
+Global vSenha As String
+Global vNomeAD As String
+
+
+Global nomeMaquinaMult As String
 
 
 

@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmVisualizador 
    BorderStyle     =   3  'Fixed Dialog
-   ClientHeight    =   8460
+   ClientHeight    =   8295
    ClientLeft      =   45
    ClientTop       =   390
    ClientWidth     =   14460
@@ -9,7 +9,7 @@ Begin VB.Form frmVisualizador
    LinkTopic       =   "Form4"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   8460
+   ScaleHeight     =   8295
    ScaleWidth      =   14460
    ShowInTaskbar   =   0   'False
    StartUpPosition =   2  'CenterScreen
@@ -82,7 +82,7 @@ Begin VB.Form frmVisualizador
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   6495
+      Height          =   6255
       Left            =   120
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
@@ -124,7 +124,7 @@ Begin VB.Form frmVisualizador
          Width           =   1575
       End
       Begin VB.CommandButton cmdAtualizar 
-         Caption         =   "Atualiar"
+         Caption         =   "Atualizar"
          BeginProperty Font 
             Name            =   "Segoe UI"
             Size            =   9.75
@@ -174,7 +174,7 @@ Begin VB.Form frmVisualizador
       Height          =   255
       Left            =   240
       TabIndex        =   5
-      Top             =   8040
+      Top             =   7920
       Width           =   3255
    End
    Begin VB.Label Label1 
@@ -188,11 +188,11 @@ Begin VB.Form frmVisualizador
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H80000014&
-      Height          =   735
+      Height          =   615
       Left            =   0
       TabIndex        =   6
       Top             =   7800
-      Width           =   14415
+      Width           =   14535
    End
 End
 Attribute VB_Name = "frmVisualizador"
@@ -220,7 +220,15 @@ Private Sub cmdAtualizar_Click()
         vLOG = "\\196.200.80.28\TempBackupOutlook\Log_PST\" & vEmpresa & "\backup_" & pc & ".txt"
 
         If fso.FileExists(vLOG) Then
-            texto = fso.OpenTextFile(vLOG, 1).ReadAll
+            
+            Set ts = fso.OpenTextFile(vLOG, 1) ' ForReading
+            If ts.AtEndOfStream Then
+                texto = ""
+                MsgBox "Arquivo está vazio!", vbInformation, "Sistemas"
+            Else
+                texto = ts.ReadAll
+            End If
+            ts.Close
 
             Me.Text1.Text = texto
             Me.Text1.SelStart = Len(Me.Text1.Text)
@@ -239,17 +247,14 @@ Private Sub cmdAtualizar_Click()
         Saida1 = "\\196.200.80.28\TempBackupOutlook\INFORMAOES_BASICO_ELE.txt"
         
         comandoQueryBasic = "cmd /c SCHTASKS /query /S " & pc & _
-                " /U ""emperes"" /P ""emperes2025"" " & _
+                " /U ""emperes"" /P ""emperes1nsid"" " & _
                 "/TN ""BackupPST_Mensal"" > """ & Saida1 & """ 2>&1"
                                 
         Set shellObj = CreateObject("WScript.Shell")
         shellObj.run comandoQueryBasic, 0, True
         
-        
         Me.Text1.Text = fso.OpenTextFile(Saida1, 1).ReadAll
-        
         Screen.MousePointer = 0
-    
     ElseIf Me.optInformacoesC.Value = True Then
         
         Screen.MousePointer = 11
@@ -257,15 +262,13 @@ Private Sub cmdAtualizar_Click()
         Saida1 = "\\196.200.80.28\TempBackupOutlook\INFORMAOES_BASICO_" & vEmpresa & ".txt"
     
        comandoQueryComplementares = "cmd /c chcp 1252 > nul &  SCHTASKS /query /S " & pc & _
-                " /U ""emperes"" /P ""emperes2025"" " & _
+                " /U ""emperes"" /P ""emperes1nsid"" " & _
                 "/TN ""BackupPST_Mensal"" /V /FO LIST > """ & Saida1 & """ 2>&1"
                                 
         Set shellObj = CreateObject("WScript.Shell")
         shellObj.run comandoQueryComplementares, 0, True
         
-        
         Me.Text1.Text = fso.OpenTextFile(Saida1, 1).ReadAll
-    
         Screen.MousePointer = 0
     Else
         MsgBox "Nenhuma opção selecionada!", vbExclamation, "Sistemas"

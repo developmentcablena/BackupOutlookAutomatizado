@@ -3,7 +3,7 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
 Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.OCX"
 Begin VB.Form frmProgramacao 
    BorderStyle     =   3  'Fixed Dialog
-   ClientHeight    =   7080
+   ClientHeight    =   7380
    ClientLeft      =   45
    ClientTop       =   390
    ClientWidth     =   10980
@@ -20,7 +20,7 @@ Begin VB.Form frmProgramacao
    LinkTopic       =   "Form4"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   7080
+   ScaleHeight     =   7380
    ScaleWidth      =   10980
    ShowInTaskbar   =   0   'False
    StartUpPosition =   2  'CenterScreen
@@ -44,10 +44,10 @@ Begin VB.Form frmProgramacao
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   4200
+      Left            =   9240
       TabIndex        =   32
-      Top             =   1320
-      Width           =   2175
+      Top             =   840
+      Width           =   1695
    End
    Begin VB.TextBox txtMensalDia 
       BackColor       =   &H8000000F&
@@ -63,7 +63,7 @@ Begin VB.Form frmProgramacao
       Height          =   405
       Left            =   5760
       TabIndex        =   7
-      Top             =   4080
+      Top             =   3720
       Width           =   615
    End
    Begin VB.CommandButton cmdTestar 
@@ -80,7 +80,7 @@ Begin VB.Form frmProgramacao
       Height          =   495
       Left            =   3240
       TabIndex        =   29
-      Top             =   5880
+      Top             =   6240
       Width           =   1455
    End
    Begin VB.CommandButton cmdExcluir 
@@ -97,7 +97,7 @@ Begin VB.Form frmProgramacao
       Height          =   495
       Left            =   1680
       TabIndex        =   28
-      Top             =   5880
+      Top             =   6240
       Width           =   1455
    End
    Begin VB.CommandButton cmdNovo 
@@ -112,7 +112,7 @@ Begin VB.Form frmProgramacao
       Height          =   375
       Left            =   8400
       TabIndex        =   6
-      Top             =   3480
+      Top             =   3120
       Width           =   1335
       _ExtentX        =   2355
       _ExtentY        =   661
@@ -136,7 +136,7 @@ Begin VB.Form frmProgramacao
       Height          =   375
       Left            =   5760
       TabIndex        =   5
-      Top             =   3480
+      Top             =   3120
       Width           =   855
       _ExtentX        =   1508
       _ExtentY        =   661
@@ -170,7 +170,7 @@ Begin VB.Form frmProgramacao
       Height          =   495
       Left            =   120
       TabIndex        =   8
-      Top             =   5880
+      Top             =   6240
       Width           =   1455
    End
    Begin VB.TextBox txtSaidaLog 
@@ -184,12 +184,12 @@ Begin VB.Form frmProgramacao
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1095
+      Height          =   1575
       Left            =   120
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   25
-      Top             =   4680
+      Top             =   4560
       Width           =   10815
    End
    Begin VB.TextBox txtData 
@@ -206,7 +206,7 @@ Begin VB.Form frmProgramacao
       Height          =   375
       Left            =   8400
       TabIndex        =   24
-      Top             =   3480
+      Top             =   3120
       Width           =   1335
    End
    Begin VB.TextBox txtHora 
@@ -223,7 +223,7 @@ Begin VB.Form frmProgramacao
       Height          =   375
       Left            =   5760
       TabIndex        =   22
-      Top             =   3480
+      Top             =   3120
       Width           =   855
    End
    Begin VB.TextBox txtCaminhoScript 
@@ -240,7 +240,7 @@ Begin VB.Form frmProgramacao
       Height          =   375
       Left            =   5760
       TabIndex        =   21
-      Top             =   2880
+      Top             =   2520
       Width           =   5055
    End
    Begin VB.TextBox txtSenha 
@@ -259,7 +259,7 @@ Begin VB.Form frmProgramacao
       Left            =   6600
       PasswordChar    =   "*"
       TabIndex        =   4
-      Top             =   2160
+      Top             =   1800
       Width           =   4215
    End
    Begin VB.TextBox txtUsuario 
@@ -276,7 +276,7 @@ Begin VB.Form frmProgramacao
       Height          =   375
       Left            =   6600
       TabIndex        =   3
-      Top             =   1680
+      Top             =   1320
       Width           =   4215
    End
    Begin VB.TextBox txtMaquina 
@@ -294,7 +294,7 @@ Begin VB.Form frmProgramacao
       Left            =   5760
       TabIndex        =   2
       Top             =   720
-      Width           =   5175
+      Width           =   3375
    End
    Begin VB.TextBox txtNomeTarefa 
       BackColor       =   &H8000000F&
@@ -319,7 +319,15 @@ Begin VB.Form frmProgramacao
       Left            =   120
       TabIndex        =   0
       Top             =   240
-      Width           =   3615
+      Width           =   3855
+      Begin VB.CheckBox chkMultSelecao 
+         Caption         =   "Mult-Seleção"
+         Height          =   195
+         Left            =   2400
+         TabIndex        =   34
+         Top             =   2400
+         Width           =   1335
+      End
       Begin MSComctlLib.ListView lvwMaquinas 
          Height          =   2895
          Left            =   120
@@ -393,7 +401,7 @@ Begin VB.Form frmProgramacao
    End
    Begin VB.Label Label12 
       BackStyle       =   0  'Transparent
-      Caption         =   "Prrogramação de tarefa do Outlook"
+      Caption         =   "Programação de tarefa do Outlook"
       BeginProperty Font 
          Name            =   "Segoe UI Semibold"
          Size            =   9.75
@@ -407,7 +415,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   120
       TabIndex        =   31
-      Top             =   6720
+      Top             =   6960
       Width           =   3255
    End
    Begin VB.Label Label1 
@@ -424,7 +432,7 @@ Begin VB.Form frmProgramacao
       Height          =   735
       Left            =   0
       TabIndex        =   30
-      Top             =   6600
+      Top             =   6960
       Width           =   11055
    End
    Begin VB.Label Label15 
@@ -441,7 +449,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   240
       TabIndex        =   26
-      Top             =   4440
+      Top             =   4320
       Width           =   1215
    End
    Begin VB.Label Label11 
@@ -458,7 +466,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   7080
       TabIndex        =   23
-      Top             =   3600
+      Top             =   3240
       Width           =   1095
    End
    Begin VB.Label Label10 
@@ -492,7 +500,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   4200
       TabIndex        =   19
-      Top             =   1800
+      Top             =   1440
       Width           =   2535
    End
    Begin VB.Label Label8 
@@ -509,7 +517,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   4200
       TabIndex        =   18
-      Top             =   2400
+      Top             =   2040
       Width           =   1575
    End
    Begin VB.Label Label7 
@@ -526,7 +534,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   4200
       TabIndex        =   17
-      Top             =   3000
+      Top             =   2640
       Width           =   1575
    End
    Begin VB.Label Label6 
@@ -543,7 +551,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   4200
       TabIndex        =   16
-      Top             =   3600
+      Top             =   3240
       Width           =   1215
    End
    Begin VB.Label Label5 
@@ -560,7 +568,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   4200
       TabIndex        =   15
-      Top             =   4200
+      Top             =   3840
       Width           =   1095
    End
    Begin VB.Label Label4 
@@ -577,7 +585,7 @@ Begin VB.Form frmProgramacao
       Height          =   255
       Left            =   5280
       TabIndex        =   14
-      Top             =   4200
+      Top             =   3840
       Width           =   495
    End
    Begin VB.Label Label3 
@@ -661,9 +669,6 @@ TratarErro:
     MsgBox "Erro ao carregar máquinas: " & Err.Description, vbCritical, "Máquinas"
 End Function
 
-
-
-
 Private Sub cmdTestar_Click()
 
 If Trim(Me.txtNomeTarefa.Text) = "" Then
@@ -696,7 +701,7 @@ If Trim(Me.txtCaminhoScript.Text) = "" Then
     Exit Sub
 End If
 
-logFile = "C:\Logs\" & nomeTarefa & ".log"
+logFile = "\\196.200.80.28\TempBackupOutlook\" & nomeTarefa & ".log"
 nomeMaquina = Me.txtMaquina.Text
 nomeTarefa = Me.txtNomeTarefa
 usuario = "CABLENABR\" & Me.txtUsuario.Text
@@ -720,15 +725,10 @@ If VerificaMaquina(nomeMaquina) Then
     
     CaminhoSaidaLog = logFile
     Me.txtSaidaLog = fso.OpenTextFile(CaminhoSaidaLog, 1).ReadAll
-
+    Screen.MousePointer = 0
 Else
-    Kill logFile
-    Open logFile For Append As #1
-    Print #1, "Máquina não está acessível ou está desligada!"
-    Close #1
-    CaminhoSaidaLog = logFile
-    
-    Me.txtSaidaLog = fso.OpenTextFile(CaminhoSaidaLog, 1).ReadAll
+    AddLog "ERRO [" & nomeMaquina & "]: máquina inacessivel!"
+    Screen.MousePointer = 0
 End If
 
 Screen.MousePointer = 0
@@ -775,35 +775,61 @@ nomeTarefa = Me.txtNomeTarefa
 usuario = "CABLENABR\" & Me.txtUsuario.Text
 senha = Me.txtSenha.Text
 script = Me.txtCaminhoScript.Text
+Me.txtSaidaLog.Text = ""
 
-comandoDelete = "cmd /c SCHTASKS /Delete /S " & nomeMaquina & _
-                " /U """ & usuario & """ /P """ & senha & """ /TN """ & nomeTarefa & """ /F  > """ & logFile & """ 2>&1"
+If Me.chkMultSelecao.Value = 1 Then
+    
+    Dim li As MSComctlLib.ListItem
+    Dim algumaSelecionada As Boolean
+    algumaSelecionada = False
+    
+    For Each li In lvwMaquinas.ListItems
+        If li.Selected Then
+    
+            algumaSelecionada = True
+            nomeMaquinaMult = li.Text
+         
+            Screen.MousePointer = 11
+                
+            If VerificaMaquina(nomeMaquinaMult) Then ' Verifica se a máquina está ligada.
+                Set fso = CreateObject("Scripting.FileSystemObject")
+                
+                comandoDelete = "cmd /c SCHTASKS /Delete /S " & nomeMaquinaMult & _
+                    " /U """ & usuario & """ /P """ & senha & """ /TN """ & nomeTarefa & """ /F"
+                
+                Set shellObj = CreateObject("WScript.Shell")
+                shellObj.run comandoDelete, 0, True   ' True para esperar terminar
+                
+                AddLog "Tarefa excluida para máquina: " & nomeMaquinaMult
+                Screen.MousePointer = 0
+            Else
+                AddLog "ERRO [" & nomeMaquinaMult & "]: máquina inacessivel!"
+                Screen.MousePointer = 0
+            End If
+        End If
+    Next
+    If Not algumaSelecionada Then
+        MsgBox "Selecione pelo menos uma máquina.", vbExclamation
+    End If
+Else ' se a máquina estiver acessivel então....
+    comandoDelete = "cmd /c SCHTASKS /Delete /S " & nomeMaquina & _
+        " /U """ & usuario & """ /P """ & senha & """ /TN """ & nomeTarefa & """ /F"
 
-Screen.MousePointer = 11
+    Screen.MousePointer = 11
 
-If VerificaMaquina(nomeMaquina) Then
-
-    'Executa os comandos
-    Set shellObj = CreateObject("WScript.Shell")
-    shellObj.run comandoDelete, 0, True   ' True para esperar terminar
-    
-    Dim CaminhoSaidaLog As String
-    Set fso = CreateObject("Scripting.FileSystemObject")
-    
-    CaminhoSaidaLog = logFile
-    Me.txtSaidaLog = fso.OpenTextFile(CaminhoSaidaLog, 1).ReadAll
-Else
-    
-    Open logFile For Append As #1
-    Print #1, "Máquina não está acessível ou está desligada!"
-    Close #1
-    CaminhoSaidaLog = logFile
-    
-    Me.txtSaidaLog = fso.OpenTextFile(CaminhoSaidaLog, 1).ReadAll
+    If VerificaMaquina(nomeMaquina) Then
+        
+        Set shellObj = CreateObject("WScript.Shell")
+        shellObj.run comandoDelete, 0, True   ' True para esperar terminar
+        
+        AddLog "Tarefa excluida para máquina: " & nomeMaquina
+        Screen.MousePointer = 0
+    Else
+        AddLog "ERRO [" & nomeMaquina & "]: máquina inacessivel!"
+        Screen.MousePointer = 0
+    End If
+    Screen.MousePointer = 0
 End If
-
-Screen.MousePointer = 0
-
 
 End Sub
 
@@ -815,7 +841,63 @@ Open CAMINHO_ARQ For Append As #fnum
     Print #fnum, Me.txtBuscarMaquina.Text
 Close #fnum
 
+MsgBox "Máquina '" & Me.txtBuscarMaquina.Text & "' adicionada com sucesso.", vbInformation
 CarregarMaquinas
+End Sub
+
+Private Sub cmdExcluirMaquinalvw_Click()
+    
+Dim fso As Object
+    Dim ts As Object
+    Dim linhas As Collection
+    Dim linha As String
+    Dim nomeExcluir As String
+    Dim achou As Boolean
+    Dim i As Long
+
+    nomeExcluir = Trim(Me.txtMaquina.Text)
+    If nomeExcluir = "" Then
+        MsgBox "Informe o nome da máquina para excluir.", vbExclamation
+        Exit Sub
+    End If
+
+    Set fso = CreateObject("Scripting.FileSystemObject")
+
+    If Not fso.FileExists(CAMINHO_ARQ) Then
+        MsgBox "Arquivo não encontrado: " & CAMINHO_ARQ, vbCritical
+        Exit Sub
+    End If
+
+    ' Lê todas as linhas do arquivo
+    Set linhas = New Collection
+    Set ts = fso.OpenTextFile(CAMINHO_ARQ, 1) ' ForReading
+    Do While Not ts.AtEndOfStream
+        linha = Trim(ts.ReadLine)
+        If LCase(linha) <> LCase(nomeExcluir) Then
+            linhas.Add linha
+        Else
+            achou = True
+        End If
+    Loop
+    ts.Close
+
+    ' Se não achou, avisa e sai
+    If Not achou Then
+        MsgBox "Máquina '" & nomeExcluir & "' não encontrada no arquivo.", vbInformation
+        Exit Sub
+    End If
+
+    ' Regrava o arquivo sem a linha excluída
+    Set ts = fso.OpenTextFile(CAMINHO_ARQ, 2) ' ForWriting
+    For i = 1 To linhas.Count
+        ts.WriteLine linhas(i)
+    Next
+    ts.Close
+
+    MsgBox "Máquina '" & nomeExcluir & "' excluída com sucesso.", vbInformation
+
+    ' Atualiza a lista
+    CarregarMaquinas
 End Sub
 
 Private Sub cmdCriar_Click()
@@ -868,8 +950,6 @@ If Len(Trim(Me.txtMensalDia.Text)) = 0 Then
     Exit Sub
 End If
 
-    
-' Pega valores da tela
 nomeMaquina = Me.txtMaquina.Text
 nomeTarefa = Me.txtNomeTarefa
 usuario = "CABLENABR\" & Me.txtUsuario.Text
@@ -880,49 +960,93 @@ dataInicio = Trim(Me.mskDataInicio.Text)
 logFile = "C:\Logs\" & nomeTarefa & ".log"
 diaMes = Me.txtMensalDia.Text
 periodicidade = "/SC MONTHLY /D " & diaMes & ""
+Me.txtSaidaLog.Text = ""
 'OBSERVAÇÃOES se semanl /SC WEEKLY /D MON,TUE,WED /ST 21:00 ou se diario /SC DAIL
 
-
-comandoCreate = "cmd /c SCHTASKS /Create /S " & nomeMaquina & _
-                " /U """ & usuario & """ /P """ & senha & """ " & _
-                "/TN """ & nomeTarefa & """ " & _
-                "/TR """ & script & """ " & _
-                periodicidade & " /ST " & horario & " /SD " & dataInicio & _
-                " /RL HIGHEST /RU """ & usuario & """ /RP """ & senha & """ /F > """ & logFile & """ 2>&1"
+If Me.chkMultSelecao.Value = 1 Then
+    
+    Dim li As MSComctlLib.ListItem
+    Dim algumaSelecionada As Boolean
+    algumaSelecionada = False
+    
+        For Each li In lvwMaquinas.ListItems
+            If li.Selected Then
+    
+                algumaSelecionada = True
+                nomeMaquinaMult = li.Text
+         
+                Screen.MousePointer = 11
                 
-
-Screen.MousePointer = 11
-
-If VerificaMaquina(nomeMaquina) Then   'Verifica se a maquina está ligada.
+                If VerificaMaquina(nomeMaquinaMult) Then ' Verifica se a máquina está ligada.
+                    Set fso = CreateObject("Scripting.FileSystemObject")
+                        
+                    Call ProcessarComputador(nomeMaquinaMult)   'Faz a instalaçao dos arquivos necessario para o backup.
+                        
+                    CaminhoSaidaBacupPST = "\\196.200.80.28\TempBackupOutlook\Log_PST\" & vEmpresa & "\backup_" & nomeMaquina & ".txt" ' caminho do txt onde vai ficar salvo o log do backup feito.
+                    
+                    If Not fso.FileExists(CaminhoSaidaBacupPST) Then 'Se não existe a pasta onde vai ficar os dados do bkp feito, cria.
+                        Set arq = fso.createTextFile(CaminhoSaidaBacupPST, True)
+                    End If
+                    
+                    ' Comando para criar a tarefa.
+                    comandoCreate = "cmd /c SCHTASKS /Create /S " & nomeMaquinaMult & _
+                        " /U """ & usuario & """ /P """ & senha & """ " & _
+                        "/TN """ & nomeTarefa & """ " & _
+                        "/TR """ & script & """ " & _
+                        periodicidade & " /ST " & horario & " /SD " & dataInicio & _
+                        " /RL HIGHEST /RU """ & usuario & """ /RP """ & senha & """ /F "
+                    
+                    Set shellObj = CreateObject("WScript.Shell")
+                    shellObj.run comandoCreate, 0, True
+                        
+                    AddLog "Tarefa criada para máquina: " & nomeMaquinaMult
+                    Screen.MousePointer = 0
+                Else
+                    AddLog "ERRO [" & nomeMaquinaMult & "]: máquina inacessivel!"
+                    Screen.MousePointer = 0
+                End If
+            End If
+        Next
+        If Not algumaSelecionada Then
+            MsgBox "Selecione pelo menos uma máquina.", vbExclamation
+        End If
+    Else
+        comandoCreate = "cmd /c SCHTASKS /Create /S " & nomeMaquina & _
+                    " /U """ & usuario & """ /P """ & senha & """ " & _
+                    "/TN """ & nomeTarefa & """ " & _
+                    "/TR """ & script & """ " & _
+                    periodicidade & " /ST " & horario & " /SD " & dataInicio & _
+                    " /RL HIGHEST /RU """ & usuario & """ /RP """ & senha & """ /F"
+                
+        Screen.MousePointer = 11
     
-    Set fso = CreateObject("Scripting.FileSystemObject")
-    Dim CaminhoSaidaBacupPST As String
-    Dim arq As Object
-    
-    Call ProcessarComputador(nomeMaquina)   'Faz a instalaçao dos arquivos necessario para o backup
-    
-    CaminhoSaidaBacupPST = "\\196.200.80.28\TempBackupOutlook\Log_PST\" & vEmpresa & "\backup_" & nomeMaquina & ".txt"
-    'Se não existe a pasta onde vai ficar os dados do bkp feito, cria.
-    If Not fso.FileExists(CaminhoSaidaBacupPST) Then
-        Set arq = fso.createTextFile(CaminhoSaidaBacupPST, True)
+        If VerificaMaquina(nomeMaquina) Then   'Verifica se a maquina está ligada.
+        
+            Set fso = CreateObject("Scripting.FileSystemObject")
+        
+            Call ProcessarComputador(nomeMaquina)   'Faz a instalaçao dos arquivos necessario para o backup
+        
+            CaminhoSaidaBacupPST = "\\196.200.80.28\TempBackupOutlook\Log_PST\" & vEmpresa & "\backup_" & nomeMaquina & ".txt"
+            
+            If Not fso.FileExists(CaminhoSaidaBacupPST) Then
+                Set arq = fso.createTextFile(CaminhoSaidaBacupPST, True)
+            End If
+        
+            Set shellObj = CreateObject("WScript.Shell")
+                shellObj.run comandoCreate, 0, True
+        
+            AddLog "Tarefa criada para máquina: " & nomeMaquina
+            Screen.MousePointer = 0
+        Else
+            AddLog "ERRO [" & nomeMaquina & "]: máquina inacessivel!"
+        End If
+        Screen.MousePointer = 0
     End If
-    
-    Set shellObj = CreateObject("WScript.Shell")
-        shellObj.run comandoCreate, 0, True
-    
-    CaminhoSaidaLog = logFile
-    Me.txtSaidaLog = fso.OpenTextFile(CaminhoSaidaLog, 1).ReadAll
-Else
-    Kill logFile
-    Open logFile For Append As #1
-    Print #1, "Máquina não está acessível ou está desligada!"
-    Close #1
-    CaminhoSaidaLog = logFile
-    
-    Me.txtSaidaLog = fso.OpenTextFile(CaminhoSaidaLog, 1).ReadAll
-End If
+End Sub
 
-Screen.MousePointer = 0
+Private Sub AddLog(ByVal msg As String)
+    Me.txtSaidaLog.Text = txtSaidaLog.Text & Format(Now, "dd/MM/yyyy") & " - " & msg & vbCrLf
+    txtSaidaLog.SelStart = Len(txtSaidaLog.Text)
 End Sub
 
 Private Sub ProcessarComputador(ByVal vMaquina As String)
@@ -950,20 +1074,10 @@ Private Sub ProcessarComputador(ByVal vMaquina As String)
     ' Copia arquivos
     fso.CopyFile pastaOrigem & "*", destino, True
     fso.CopyFile pastaOrigem2 & "*", destino2, True
-
 TrataErros:
-' MsgBox "Erro: " & Err.Number & " - " & Err.Description, vbCritical
+    ' MsgBox "Erro: " & Err.Number & " - " & Err.Description, vbCritical
     Err.Clear
 End Sub
-
-
-
-
-
-
-
-
-
 
 
 Public Function VerificaMaquina(nomeMaquina As String) As Boolean
@@ -1041,6 +1155,12 @@ Me.mskHoraInicio.BackColor = RGB(224, 223, 237)
 Me.txtMensalDia.BackColor = RGB(224, 223, 237)
 Me.txtBuscarMaquina.BackColor = RGB(224, 223, 237)
 Me.lvwMaquinas.BackColor = RGB(224, 223, 237)
+Me.txtUsuario.Text = vUsuario
+Me.txtUsuario.Enabled = False
+Me.txtSenha.Enabled = False
+Me.txtSenha.Text = vSenha
+Me.chkMultSelecao.Value = False
+
 
 End Sub
 
@@ -1054,6 +1174,7 @@ Private Sub ListarMaquinasLVW()
     With Me.lvwMaquinas
         .View = lvwReport                 ' 3 - modo relatório
         .LabelEdit = lvwManual
+        .MultiSelect = False
         .ListItems.Clear
         .FullRowSelect = True
         .GridLines = True
@@ -1105,6 +1226,13 @@ End Sub
 
 
 Private Sub lvwMaquinas_Click()
+
+If Me.chkMultSelecao.Value = 1 Then
+    Me.lvwMaquinas.MultiSelect = True
+Else
+    Me.lvwMaquinas.MultiSelect = False
+End If
+
 Dim ItemSelecionado As MSComctlLib.ListItem
 
 Set ItemSelecionado = Me.lvwMaquinas.SelectedItem

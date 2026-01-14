@@ -23,28 +23,32 @@ Begin VB.Form frmPrincipal
       _ExtentY        =   873
       _Version        =   393216
       BeginProperty Panels {8E3867A5-8586-11D1-B16A-00C0F0283628} 
-         NumPanels       =   5
+         NumPanels       =   6
          BeginProperty Panel1 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             AutoSize        =   1
-            Object.Width           =   10812
+            Object.Width           =   5785
             MinWidth        =   3351
          EndProperty
          BeginProperty Panel2 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
+            AutoSize        =   1
+            Object.Width           =   4974
+         EndProperty
+         BeginProperty Panel3 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             AutoSize        =   2
             Object.Width           =   3254
             MinWidth        =   3263
          EndProperty
-         BeginProperty Panel3 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
+         BeginProperty Panel4 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   6
             Alignment       =   1
-            TextSave        =   "23/12/2025"
-         EndProperty
-         BeginProperty Panel4 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
-            Style           =   5
-            Alignment       =   1
-            TextSave        =   "18:17"
+            TextSave        =   "12/01/2026"
          EndProperty
          BeginProperty Panel5 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
+            Style           =   5
+            Alignment       =   1
+            TextSave        =   "17:50"
+         EndProperty
+         BeginProperty Panel6 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Object.Width           =   3175
             MinWidth        =   3175
          EndProperty
@@ -127,13 +131,10 @@ Attribute VB_Exposed = False
 
 
 Private Sub Form_Resize()
-
-
-'
-
 Me.StatusBar1.Panels(1).Text = "CABLENA DO BRASIL LTDA"
-Me.StatusBar1.Panels(2).Text = vEmpresa
-Me.StatusBar1.Panels(5).Text = "Versão: " & App.Major & "." & App.Minor & "." & App.Revision
+Me.StatusBar1.Panels(2).Text = "Administrador: " & vNomeAD
+Me.StatusBar1.Panels(3).Text = vEmpresa
+Me.StatusBar1.Panels(6).Text = "Versão: " & App.Major & "." & App.Minor & "." & App.Revision
 
 End Sub
 
